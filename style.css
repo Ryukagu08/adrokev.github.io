@@ -1,0 +1,56 @@
+body {
+    background: linear-gradient(to right, rgb(34, 34, 34), rgb(14, 14, 14))
+}
+.adDiv {
+    display: block;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.829);
+    width: 10%;
+    padding: 0 0 20px 0;
+    border-radius: 20px;
+    box-shadow: 2px 3px 8px 3px rgba(0, 0, 0, 0.6);
+}
+.adLogo {
+    width: 150px;
+    display: block;
+    margin: 20px auto 0;
+    border-radius: 90%;
+}
+.adName, .adSub {
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+.adBio {
+    display: block;
+    margin: auto;
+}
+.adP {
+    color: rgba(255, 255, 255, 0.7);
+    display: block;
+    text-align: center;
+    font-size: 35px;
+}
+.workDiv {
+    display: block;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.027);
+    height: 320px;
+    border-radius: 30px;
+}
+.workP {
+    color: rgba(255, 255, 255, 0.7);
+    text-align: left;
+    font-size: 40px;
+    padding: 50px;
+}
+.horrorImg {
+    float: right;
+    height: 290px;
+    padding: 15px 20px 15px 0;
+    border-radius: 0 40px 40px 0px;
+}
+.workDs {
+    color: rgba(255, 255, 255, 0.09);
+    padding: 0 50px;
+}
