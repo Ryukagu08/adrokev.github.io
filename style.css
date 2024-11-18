@@ -58,7 +58,7 @@ body {
 /* Pantallas medianas (tablets y laptops pequeños) */
 @media screen and (min-width: 768px) and (max-width: 1313px) {
     .adDiv {
-        width: 200px;
+        width: 190px;
         padding: 20px;
     }
     .adLogo {
@@ -81,12 +81,18 @@ body {
 
 /* Pantallas pequeñas (smartphones grandes) */
 @media screen and (min-width: 481px) and (max-width: 1023px) {
+    .adName {
+        font-size: 3vh;
+    }
+    .adSub {
+        font-size: 2vh;
+    }
     .adDiv {
         width: 140px;
         padding: 15px;
     }
     .adLogo {
-        width: 110px;
+        width: 150px;
     }
     .adP {
         font-size: 20px;
@@ -106,12 +112,18 @@ body {
 
 /* Pantallas muy pequeñas (smartphones chicos) */
 @media screen and (max-width: 480px) {
+    .adName {
+        font-size: 2vh;
+    }
+    .adSub {
+        font-size: 1vh;
+    }
     .adDiv {
         width: 100px;
         padding: 10px;
     }
     .adLogo {
-        width: 70px;
+        width: 100px;
     }
     .adP {
         font-size: 14px;
