@@ -79,8 +79,39 @@ body {
     }
 }
 
-/* Pantallas pequeñas (smartphones grandes) */
-@media screen and (min-width: 481px) and (max-width: 1023px) {
+/* Pantallas muy pequeñas (smartphones pequeños) */
+@media screen and (max-width: 480px) {
+    .adName {
+        font-size: 2vh;
+    }
+    .adSub {
+        font-size: 1vh;
+    }
+    .adDiv {
+        width: 100px;
+        padding: 10px;
+    }
+    .adLogo {
+        width: 100px;
+    }
+    .adP {
+        font-size: 14px;
+    }
+    .workP {
+        font-size: 12px;
+        padding: 8px;
+    }
+    .horrorImg {
+        height: 120px;
+    }
+    .workDiv {
+        height: auto;
+        padding: 5px;
+    }
+}
+
+/* Pantallas pequeñas (smartphones grandes y tablets pequeñas) */
+@media screen and (min-width: 480px) and (max-width: 768px) {
     .adName {
         font-size: 3vh;
     }
@@ -110,34 +141,51 @@ body {
     }
 }
 
-/* Pantallas muy pequeñas (smartphones chicos) */
-@media screen and (max-width: 480px) {
-    .adName {
-        font-size: 2vh;
-    }
-    .adSub {
-        font-size: 1vh;
-    }
+/* Pantallas medianas (tablets y laptops pequeños) */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
     .adDiv {
-        width: 100px;
-        padding: 10px;
+        width: 190px;
+        padding: 20px;
     }
     .adLogo {
-        width: 100px;
+        width: 150px;
     }
     .adP {
-        font-size: 14px;
+        font-size: 30px;
     }
     .workP {
-        font-size: 12px;
-        padding: 8px;
+        font-size: 35px;
+        padding: 40px;
     }
     .horrorImg {
-        height: 120px;
+        height: 280px;
     }
     .workDiv {
-        height: auto;
-        padding: 5px;
+        height: 320px;
+    }
+}
+
+/* Pantallas grandes (laptops y desktops) */
+@media screen and (min-width: 1024px) {
+    .adDiv {
+        width: 220px;
+        padding: 25px;
+    }
+    .adLogo {
+        width: 180px;
+    }
+    .adP {
+        font-size: 35px;
+    }
+    .workP {
+        font-size: 40px;
+        padding: 50px;
+    }
+    .horrorImg {
+        height: 300px;
+    }
+    .workDiv {
+        height: 340px;
     }
 }
 
