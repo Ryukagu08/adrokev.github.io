@@ -113,10 +113,10 @@ body {
 /* Pantallas pequeñas (smartphones grandes y tablets pequeñas) */
 @media screen and (min-width: 480px) and (max-width: 768px) {
     .adName {
-        font-size: 3vh;
+        font-size: 28px;
     }
     .adSub {
-        font-size: 2vh;
+        font-size: 18px;
     }
     .adDiv {
         width: 140px;
@@ -133,7 +133,7 @@ body {
         padding: 15px;
     }
     .horrorImg {
-        height: 12vh;
+        height: 23vh;
     }
     .workDiv {
         height: auto;
@@ -169,7 +169,7 @@ body {
 @media screen and (min-width: 1024px) {
     .adDiv {
         width: 220px;
-        padding: 25px;
+        padding: 0 0 20px 0;
     }
     .adLogo {
         width: 180px;
@@ -178,8 +178,8 @@ body {
         font-size: 35px;
     }
     .workP {
-        font-size: 40px;
-        padding: 50px;
+        font-size: 35px;
+        padding: 50px 50px 0 50px;
     }
     .horrorImg {
         height: 300px;
