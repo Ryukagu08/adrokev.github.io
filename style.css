@@ -1,196 +1,208 @@
+/* General Styles */
 body {
-    background: linear-gradient(to right, rgb(34, 34, 34), rgb(14, 14, 14))
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
-.adDiv {
-    display: block;
-    margin: auto;
-    background-color: rgba(255, 255, 255, 0.829);
-    width: 190px;
-    padding: 0 0 20px 0;
-    border-radius: 20px;
-    box-shadow: 2px 3px 8px 3px rgba(0, 0, 0, 0.6);
+
+/* Fade-in Animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
-.adLogo {
-    width: 150px;
-    display: block;
-    margin: 20px auto 0;
-    border-radius: 90%;
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
-.adName, .adSub {
-    display: block;
-    margin: auto;
+
+/* Header Section */
+.header {
     text-align: center;
+    padding: 40px 20px;
+    background-color: #1e1e1e;
+    border-bottom: 1px solid #333;
 }
-.adBio {
-    display: block;
-    margin: auto;
+
+.logo {
+    width: 140px;
+    margin-bottom: 15px;
 }
-.adP {
-    color: rgba(255, 255, 255, 0.7);
-    display: block;
+
+.name {
+    font-size: 2.5rem;
+    margin: 0;
+    color: #e0e0e0;
+}
+
+/* About Section */
+.about {
+    padding: 40px 20px;
     text-align: center;
-    font-size: 35px;
-}
-.workDiv {
-    display: block;
-    margin: auto;
-    background-color: rgba(255, 255, 255, 0.027);
-    height: 320px;
-    border-radius: 30px;
-}
-.workP {
-    color: rgba(255, 255, 255, 0.7);
-    text-align: left;
-    font-size: 40px;
-    padding: 50px;
-}
-.horrorImg {
-    float: right;
-    height: 290px;
-    padding: 15px 20px 15px 20px;
-    border-radius: 0 40px 40px 0px;
-}
-.workDs {
-    color: rgba(255, 255, 255, 0.09);
-    padding: 0 0 0 50px;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-/* Pantallas medianas (tablets y laptops pequeños) */
-@media screen and (min-width: 768px) and (max-width: 1313px) {
-    .adDiv {
-        width: 190px;
-        padding: 20px;
-    }
-    .adLogo {
-        width: 150px;
-    }
-    .adP {
-        font-size: 30px;
-    }
-    .workP {
-        font-size: 35px;
-        padding: 40px;
-    }
-    .horrorImg {
-        height: 280px;
-    }
-    .workDiv {
-        height: 320px;
-    }
+.about-text {
+    font-size: 1.2rem;
+    color: #b0b0b0;
 }
 
-/* Pantallas muy pequeñas (smartphones pequeños) */
-@media screen and (max-width: 480px) {
-    .adName {
-        font-size: 2vh;
-    }
-    .adSub {
-        font-size: 1vh;
-    }
-    .adDiv {
-        width: 100px;
-        padding: 10px;
-    }
-    .adLogo {
-        width: 100px;
-    }
-    .adP {
-        font-size: 14px;
-    }
-    .workP {
-        font-size: 12px;
-        padding: 8px;
-    }
-    .horrorImg {
-        height: 120px;
-    }
-    .workDiv {
-        height: auto;
-        padding: 5px;
-    }
+/* Projects Section */
+.projects {
+    flex: 1;
+    padding: 60px 20px;
+    background-color: #1e1e1e;
+    border-top: 1px solid #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/* Pantallas pequeñas (smartphones grandes y tablets pequeñas) */
-@media screen and (min-width: 480px) and (max-width: 768px) {
-    .adName {
-        font-size: 28px;
-    }
-    .adSub {
-        font-size: 18px;
-    }
-    .adDiv {
-        width: 140px;
-        padding: 15px;
-    }
-    .adLogo {
-        width: 150px;
-    }
-    .adP {
-        font-size: 20px;
-    }
-    .workP {
-        font-size: 18px;
-        padding: 15px;
-    }
-    .horrorImg {
-        height: 23vh;
-    }
-    .workDiv {
-        height: auto;
-        padding: 10px;
-    }
+.project {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 900px;
+    align-items: center;
 }
 
-/* Pantallas medianas (tablets y laptops pequeños) */
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-    .adDiv {
-        width: 190px;
-        padding: 20px;
-    }
-    .adLogo {
-        width: 150px;
-    }
-    .adP {
-        font-size: 30px;
-    }
-    .workP {
-        font-size: 35px;
-        padding: 40px;
-    }
-    .horrorImg {
-        height: 280px;
-    }
-    .workDiv {
-        height: 320px;
-    }
-}
-
-/* Pantallas grandes (laptops y desktops) */
-@media screen and (min-width: 1024px) {
-    .adDiv {
-        width: 220px;
-        padding: 0 0 20px 0;
-    }
-    .adLogo {
-        width: 180px;
-    }
-    .adP {
-        font-size: 35px;
-    }
-    .workP {
-        font-size: 35px;
-        padding: 50px 50px 0 50px;
-    }
-    .horrorImg {
-        height: 300px;
-    }
-    .workDiv {
-        height: 340px;
-    }
-}
-
-/* Ajustes generales para imágenes */
-img {
-    max-width: 100%;
+.project-image {
+    flex: 1 1 220px;
+    max-width: 220px;
     height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+}
+
+.project-info {
+    flex: 1 1 400px;
+    padding: 20px;
+}
+
+.project-title {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    color: #f0f0f0;
+}
+
+.project-description {
+    font-size: 1rem;
+    color: #c0c0c0;
+    margin-bottom: 10px;
+}
+
+.disclaimer {
+    font-size: 0.8rem;
+    color: #888;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    background-color: #1e1e1e;
+    border-top: 1px solid #333;
+    color: #666;
+    margin-top: auto;
+}
+
+/* Responsive Design */
+
+/* Extra Small Devices (phones under 480px) */
+@media (max-width: 480px) {
+    .name {
+        font-size: 1.8rem;
+    }
+
+    .about-text {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+
+    .project {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .project-image {
+        max-width: 100%;
+    }
+
+    .project-info {
+        padding: 10px;
+    }
+
+    .project-title {
+        font-size: 1.4rem;
+    }
+
+    .project-description {
+        font-size: 0.9rem;
+    }
+}
+
+/* Small Devices (phones and tablets 480px to 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .name {
+        font-size: 2rem;
+    }
+
+    .about-text {
+        font-size: 1.1rem;
+    }
+
+    .project {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .project-image {
+        max-width: 180px;
+        margin: 0 auto 10px;
+    }
+
+    .project-info {
+        padding: 15px;
+    }
+}
+
+/* Medium Devices (tablets and small laptops 768px to 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .project {
+        flex-direction: row;
+        gap: 15px;
+    }
+
+    .project-image {
+        max-width: 200px;
+    }
+
+    .project-info {
+        flex: 1 1 300px;
+    }
+}
+
+/* Large Devices (desktops over 1024px) */
+@media (min-width: 1025px) {
+    .projects {
+        padding: 80px 40px; /* Extra padding for large screens */
+    }
+
+    .project-image {
+        flex: 1 1 240px;
+        max-width: 240px;
+    }
+
+    .project-info {
+        flex: 1 1 500px;
+    }
 }
