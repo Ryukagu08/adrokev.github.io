@@ -41,12 +41,58 @@ body {
     transform: translateY(0);
 }
 
+/* Slide-in Animations */
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(100%); /* Slide in from the right */
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%); /* Slide in from the left */
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-50%); /* Slide in from the top */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInFromBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(50%); /* Slide in from the bottom */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 /* Header Section */
 .header {
     text-align: center;
     padding: 50px 20px;
     background-color: #111111; /* Even darker background for header */
     border-bottom: 2px solid #333;
+    animation: slideInFromTop 0.7s ease-out forwards; /* Slide-in from top */
 }
 
 .logo {
@@ -66,6 +112,7 @@ body {
     text-align: center;
     max-width: 900px;
     margin: 0 auto;
+    animation: slideInFromLeft 0.7s ease-out forwards; /* Slide-in from left */
 }
 
 .about-text {
@@ -82,6 +129,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    animation: slideInFromBottom 0.7s ease-out forwards; /* Slide-in from bottom */
 }
 
 .project {
@@ -151,6 +199,7 @@ body {
     color: #777; /* Soft footer text */
     margin-top: auto;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Subtle footer shadow */
+    animation: slideInFromBottom 0.7s ease-out forwards; /* Slide-in from bottom */
 }
 
 /* Responsive Design */
