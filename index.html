@@ -4,14 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adrokev Games</title>
-    <link rel="stylesheet" href="style.css">
+    <link id="theme-style" rel="stylesheet" href="style.css"> <!-- Default to dark mode -->
     <script defer src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+    <!-- Theme Toggle Button -->
+    <button id="theme-toggle" class="theme-toggle">
+        <i class="fas fa-sun"></i> <!-- Icon for light mode -->
+    </button>
+
     <!-- Header Section -->
     <header class="header fade-in">
         <div class="logo-container">
-            <img class="logo" src="https://i.ibb.co/HVBM2Q9/white-black-no-BG.png" alt="Adrokev Logo">
+            <img id="logo" class="logo" src="https://i.ibb.co/HVBM2Q9/white-black-no-BG.png" alt="Adrokev Logo">
             <h1 class="name">ADROKEV GAMES</h1>
         </div>
     </header>
