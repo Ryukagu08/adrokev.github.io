@@ -22,15 +22,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const themeStyle = document.getElementById("theme-style");
     const logo = document.getElementById("logo");
 
-    // Check the user's last theme preference or default to dark mode
+    // Immediately set the logo and theme before rendering page
     const userTheme = localStorage.getItem("theme") || "dark";
-    themeStyle.href = userTheme === "light" ? "style-light.css" : "style.css";
-    logo.src = userTheme === "light" 
-        ? "https://i.ibb.co/HVBM2Q9/white-black-no-BG.png"  // White logo for light mode
-        : "https://i.ibb.co/0C6TvPx/black-white-no-BG.png"; // Black logo for dark mode
-    themeToggle.innerHTML = userTheme === "light" 
-        ? '<i class="fas fa-moon"></i>'  // Moon icon for light mode
-        : '<i class="fas fa-sun"></i>';  // Sun icon for dark mode
+    applyTheme(userTheme);
 
     // Toggle theme on button click
     themeToggle.addEventListener("click", () => {
@@ -41,6 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     function applyTheme(theme) {
+        // Set the theme immediately before applying the stylesheet
         if (theme === "light") {
             themeStyle.href = "style-light.css"; // Apply light theme
             logo.src = "https://i.ibb.co/HVBM2Q9/white-black-no-BG.png"; // White logo for light theme
