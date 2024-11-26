@@ -161,16 +161,14 @@ body {
     max-width: 400px;
     height: auto;
     border-radius: 12px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.8); /* Increased shadow for the image */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover effects for image */
+    transition: transform 0.3s ease;
 }
 
 .project-info {
     flex: 2;
     padding: 20px;
     background-color: #111111; /* Dark background for the text section */
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5); /* Stronger shadow for text container */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover effects for text container */
+    transition: transform 0.3s ease;
 }
 
 .project-title {
@@ -193,12 +191,10 @@ body {
 /* Hover Effects for Image and Text Container */
 .project:hover .project-image {
     transform: scale(1.05); /* Slightly enlarge image on hover */
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
 }
 
 .project:hover .project-info {
     transform: translateY(-5px); /* Lift the text container on hover */
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5); /* Stronger shadow for text container */
 }
 
 /* Footer */
