@@ -202,12 +202,22 @@ body {
     text-align: center;
     padding: 20px;
     font-size: 0.9rem;
-    background-color: #111111; /* Dark background for footer */
+    background-color: #111111;
     border-top: 2px solid #333;
-    color: #777; /* Soft footer text */
+    color: #777;
     margin-top: auto;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Subtle footer shadow */
-    animation: slideInFromBottom 0.7s ease-out forwards; /* Slide-in from bottom */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    animation: slideInFromBottom 0.7s ease-out forwards;
+}
+
+.footer a {
+    color: #777;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer a:hover {
+    text-decoration: underline;
 }
 
 /* Responsive Design */
