@@ -1,3 +1,7 @@
+/* Disable transitions initially to prevent flicker */
+html.theme-loaded {
+    transition: none;
+}
 /* General Styles */
 body {
     margin: 0;
