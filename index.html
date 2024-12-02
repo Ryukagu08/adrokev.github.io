@@ -1,35 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adrokev Games</title>
+
     <link rel="manifest" href="/site.webmanifest.json">
     <link rel="icon" href="adrokev-favicon.ico" type="image/x-icon">
 
-    <!-- Remember theme script -->
-    <script>
-        // Apply the theme before any content is rendered
-        (function() {
-            const userTheme = localStorage.getItem('theme') || 'dark'; // Default to 'dark' if no preference is found
-            const themeStyle = document.getElementById('theme-style');
-            
-            // Set the correct theme before content is visible
-            if (userTheme === 'light') {
-                themeStyle.href = 'style-light.css'; // Apply light theme
-            } else {
-                themeStyle.href = 'style.css'; // Apply dark theme
-            }
-
-            // Add a class to the <html> element to disable transitions while the theme is loading
-            document.documentElement.classList.add('theme-loaded');
-        })();
-    </script>
-
+    <!-- Default Stylesheet -->
     <link id="theme-style" rel="stylesheet" href="style.css"> <!-- Default to dark mode -->
 
-    <script defer src="script.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <!-- Metadata for Embeds (Open Graph) -->
@@ -51,7 +32,7 @@
 <body>
     <!-- Theme Toggle Button -->
     <button id="theme-toggle" class="theme-toggle">
-        <i class="fas fa-sun"></i> <!-- Icon for light mode -->
+        <i id="theme-icon" class="fas fa-sun"></i> <!-- Icon for light mode -->
     </button>
 
     <!-- Header Section -->
@@ -87,5 +68,7 @@
         <p>&copy; 2024 Adrokev. All rights reserved.</p>
         <p>Contact: <a href="mailto:adrokevgames@gmail.com">adrokevgames@gmail.com</a></p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

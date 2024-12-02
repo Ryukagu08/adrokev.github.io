@@ -1,30 +1,34 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const themeToggle = document.getElementById("theme-toggle");
-    const themeStyle = document.getElementById("theme-style");
-    const logo = document.getElementById("logo");
+// Select elements
+const themeToggleButton = document.getElementById('theme-toggle');
+const themeIcon = document.getElementById('theme-icon');
+const themeStyle = document.getElementById('theme-style');
 
-    // Immediately set the theme based on the saved preference in localStorage
-    const userTheme = localStorage.getItem("theme") || "dark";
-    applyTheme(userTheme);
-
-    // Toggle theme on button click
-    themeToggle.addEventListener("click", () => {
-        const currentTheme = themeStyle.href.includes("style-light.css") ? "light" : "dark";
-        const newTheme = currentTheme === "light" ? "dark" : "light";
-        applyTheme(newTheme);
-        localStorage.setItem("theme", newTheme); // Save the new theme to localStorage
-    });
-
-    function applyTheme(theme) {
-        // Apply the theme immediately before rendering content
-        if (theme === "light") {
-            themeStyle.href = "style-light.css"; // Apply light theme
-            logo.src = "https://i.ibb.co/HVBM2Q9/white-black-no-BG.png"; // White logo for light theme
-            themeToggle.innerHTML = '<i class="fas fa-moon"></i>'; // Moon icon for light mode
-        } else {
-            themeStyle.href = "style.css"; // Apply dark theme
-            logo.src = "https://i.ibb.co/0C6TvPx/black-white-no-BG.png"; // Black logo for dark theme
-            themeToggle.innerHTML = '<i class="fas fa-sun"></i>'; // Sun icon for dark mode
-        }
+// Function to switch theme
+function switchTheme(theme) {
+    if (theme === 'light') {
+        themeStyle.setAttribute('href', 'style.css');
+        themeIcon.classList.replace('fa-moon', 'fa-sun'); // Change icon to sun
+    } else {
+        themeStyle.setAttribute('href', 'style-light.css');
+        themeIcon.classList.replace('fa-sun', 'fa-moon'); // Change icon to moon
     }
+}
+
+// Event listener for theme toggle button
+themeToggleButton.addEventListener('click', () => {
+    // Determine current theme
+    const currentTheme = themeStyle.getAttribute('href') === 'style-light.css' ? 'dark' : 'light';
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    
+    // Apply new theme
+    switchTheme(newTheme);
+
+    // Save new theme in localStorage
+    localStorage.setItem('theme', newTheme);
+});
+
+// Check localStorage for saved theme on page load
+document.addEventListener('DOMContentLoaded', () => {
+    const savedTheme = localStorage.getItem('theme') || 'dark'; // Default to dark theme
+    switchTheme(savedTheme);
 });
